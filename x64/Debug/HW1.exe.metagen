@@ -22,8 +22,6 @@ Class CppCLRWinFormsProject.Form1: AutoLayout, AnsiClass, Class, Public, BeforeF
   Fields:
     System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Int32]] numbers2D : Public
     System.Collections.Generic.List`1[System.Double] selectionSortTimes : Public
-    System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Int32]] selectionSortedNumbers2D : Public
+    System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Int32]] sortedNumbers2D : Public
     System.Collections.Generic.List`1[System.Double] bubbleSortTimes : Public
-    System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Int32]] bubbleSortedNumbers2D : Public
     System.Collections.Generic.List`1[System.Double] quickSortTimes : Public
-    System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.Int32]] quickSortedNumbers2D : Public

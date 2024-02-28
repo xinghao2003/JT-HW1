@@ -81,6 +81,21 @@ namespace CppCLRWinFormsProject {
 	private: System::Windows::Forms::ListBox^ listBoxBubbleSortTime;
 	private: System::Windows::Forms::ListBox^ listBoxQuickSortTime;
 	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::TextBox^ textBoxTarget;
+
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::TextBox^ textBoxRangeEnd;
+
+	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::TextBox^ textBoxRangeStart;
+	private: System::Windows::Forms::ListBox^ listBoxSearchResult;
+
+	private: System::Windows::Forms::Button^ buttonBinarySearch;
+	private: System::Windows::Forms::CheckBox^ checkBoxDisplayNumbers;
+	private: System::Windows::Forms::RichTextBox^ richTextBoxNumbers;
+
+
 
 
 
@@ -123,13 +138,23 @@ namespace CppCLRWinFormsProject {
 			this->listBoxBubbleSortTime = (gcnew System::Windows::Forms::ListBox());
 			this->listBoxQuickSortTime = (gcnew System::Windows::Forms::ListBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->textBoxTarget = (gcnew System::Windows::Forms::TextBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->textBoxRangeEnd = (gcnew System::Windows::Forms::TextBox());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->textBoxRangeStart = (gcnew System::Windows::Forms::TextBox());
+			this->listBoxSearchResult = (gcnew System::Windows::Forms::ListBox());
+			this->buttonBinarySearch = (gcnew System::Windows::Forms::Button());
+			this->checkBoxDisplayNumbers = (gcnew System::Windows::Forms::CheckBox());
+			this->richTextBoxNumbers = (gcnew System::Windows::Forms::RichTextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chartResult))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// textBoxNumber
 			// 
 			this->textBoxNumber->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->textBoxNumber->Location = System::Drawing::Point(58, 16);
+			this->textBoxNumber->Location = System::Drawing::Point(122, 16);
 			this->textBoxNumber->Name = L"textBoxNumber";
 			this->textBoxNumber->Size = System::Drawing::Size(100, 26);
 			this->textBoxNumber->TabIndex = 0;
@@ -147,7 +172,7 @@ namespace CppCLRWinFormsProject {
 			// textBoxRepetition
 			// 
 			this->textBoxRepetition->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->textBoxRepetition->Location = System::Drawing::Point(284, 16);
+			this->textBoxRepetition->Location = System::Drawing::Point(371, 16);
 			this->textBoxRepetition->Name = L"textBoxRepetition";
 			this->textBoxRepetition->Size = System::Drawing::Size(100, 26);
 			this->textBoxRepetition->TabIndex = 2;
@@ -156,7 +181,7 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->label2->Location = System::Drawing::Point(170, 19);
+			this->label2->Location = System::Drawing::Point(257, 19);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(102, 20);
 			this->label2->TabIndex = 3;
@@ -166,7 +191,7 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->label3->Location = System::Drawing::Point(398, 19);
+			this->label3->Location = System::Drawing::Point(485, 19);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(56, 20);
 			this->label3->TabIndex = 4;
@@ -175,7 +200,7 @@ namespace CppCLRWinFormsProject {
 			// textBoxStep
 			// 
 			this->textBoxStep->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->textBoxStep->Location = System::Drawing::Point(460, 16);
+			this->textBoxStep->Location = System::Drawing::Point(547, 16);
 			this->textBoxStep->Name = L"textBoxStep";
 			this->textBoxStep->Size = System::Drawing::Size(100, 26);
 			this->textBoxStep->TabIndex = 5;
@@ -183,9 +208,9 @@ namespace CppCLRWinFormsProject {
 			// buttonDataGeneration
 			// 
 			this->buttonDataGeneration->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->buttonDataGeneration->Location = System::Drawing::Point(22, 57);
+			this->buttonDataGeneration->Location = System::Drawing::Point(22, 93);
 			this->buttonDataGeneration->Name = L"buttonDataGeneration";
-			this->buttonDataGeneration->Size = System::Drawing::Size(150, 30);
+			this->buttonDataGeneration->Size = System::Drawing::Size(177, 30);
 			this->buttonDataGeneration->TabIndex = 6;
 			this->buttonDataGeneration->Text = L"Data Generation";
 			this->buttonDataGeneration->UseVisualStyleBackColor = true;
@@ -194,7 +219,7 @@ namespace CppCLRWinFormsProject {
 			// buttonSelectionSort
 			// 
 			this->buttonSelectionSort->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->buttonSelectionSort->Location = System::Drawing::Point(176, 57);
+			this->buttonSelectionSort->Location = System::Drawing::Point(205, 93);
 			this->buttonSelectionSort->Name = L"buttonSelectionSort";
 			this->buttonSelectionSort->Size = System::Drawing::Size(125, 30);
 			this->buttonSelectionSort->TabIndex = 7;
@@ -205,7 +230,7 @@ namespace CppCLRWinFormsProject {
 			// buttonBubbleSort
 			// 
 			this->buttonBubbleSort->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->buttonBubbleSort->Location = System::Drawing::Point(305, 57);
+			this->buttonBubbleSort->Location = System::Drawing::Point(334, 93);
 			this->buttonBubbleSort->Name = L"buttonBubbleSort";
 			this->buttonBubbleSort->Size = System::Drawing::Size(125, 30);
 			this->buttonBubbleSort->TabIndex = 8;
@@ -217,7 +242,7 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->label4->Location = System::Drawing::Point(23, 98);
+			this->label4->Location = System::Drawing::Point(23, 134);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(74, 20);
 			this->label4->TabIndex = 9;
@@ -227,7 +252,7 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->label5->Location = System::Drawing::Point(176, 98);
+			this->label5->Location = System::Drawing::Point(205, 134);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(52, 20);
 			this->label5->TabIndex = 10;
@@ -237,7 +262,7 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->label6->Location = System::Drawing::Point(303, 98);
+			this->label6->Location = System::Drawing::Point(332, 134);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(52, 20);
 			this->label6->TabIndex = 11;
@@ -246,7 +271,7 @@ namespace CppCLRWinFormsProject {
 			// buttonReRun
 			// 
 			this->buttonReRun->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->buttonReRun->Location = System::Drawing::Point(23, 239);
+			this->buttonReRun->Location = System::Drawing::Point(23, 275);
 			this->buttonReRun->Name = L"buttonReRun";
 			this->buttonReRun->Size = System::Drawing::Size(100, 30);
 			this->buttonReRun->TabIndex = 15;
@@ -257,9 +282,9 @@ namespace CppCLRWinFormsProject {
 			// buttonLoadChart
 			// 
 			this->buttonLoadChart->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->buttonLoadChart->Location = System::Drawing::Point(354, 239);
+			this->buttonLoadChart->Location = System::Drawing::Point(482, 275);
 			this->buttonLoadChart->Name = L"buttonLoadChart";
-			this->buttonLoadChart->Size = System::Drawing::Size(100, 30);
+			this->buttonLoadChart->Size = System::Drawing::Size(117, 30);
 			this->buttonLoadChart->TabIndex = 16;
 			this->buttonLoadChart->Text = L"Load Chart";
 			this->buttonLoadChart->UseVisualStyleBackColor = true;
@@ -268,7 +293,7 @@ namespace CppCLRWinFormsProject {
 			// buttonClear
 			// 
 			this->buttonClear->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->buttonClear->Location = System::Drawing::Point(461, 239);
+			this->buttonClear->Location = System::Drawing::Point(605, 275);
 			this->buttonClear->Name = L"buttonClear";
 			this->buttonClear->Size = System::Drawing::Size(100, 30);
 			this->buttonClear->TabIndex = 17;
@@ -280,7 +305,7 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->checkBoxSpline->AutoSize = true;
 			this->checkBoxSpline->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->checkBoxSpline->Location = System::Drawing::Point(263, 242);
+			this->checkBoxSpline->Location = System::Drawing::Point(391, 278);
 			this->checkBoxSpline->Name = L"checkBoxSpline";
 			this->checkBoxSpline->Size = System::Drawing::Size(77, 24);
 			this->checkBoxSpline->TabIndex = 18;
@@ -293,13 +318,13 @@ namespace CppCLRWinFormsProject {
 			this->chartResult->ChartAreas->Add(chartArea1);
 			legend1->Name = L"Legend1";
 			this->chartResult->Legends->Add(legend1);
-			this->chartResult->Location = System::Drawing::Point(23, 284);
+			this->chartResult->Location = System::Drawing::Point(23, 320);
 			this->chartResult->Name = L"chartResult";
 			series1->ChartArea = L"ChartArea1";
 			series1->Legend = L"Legend1";
 			series1->Name = L"Series1";
 			this->chartResult->Series->Add(series1);
-			this->chartResult->Size = System::Drawing::Size(537, 300);
+			this->chartResult->Size = System::Drawing::Size(700, 300);
 			this->chartResult->TabIndex = 19;
 			this->chartResult->Text = L"chart1";
 			// 
@@ -307,16 +332,16 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->listBoxNumberData->FormattingEnabled = true;
 			this->listBoxNumberData->ItemHeight = 16;
-			this->listBoxNumberData->Location = System::Drawing::Point(23, 121);
+			this->listBoxNumberData->Location = System::Drawing::Point(23, 157);
 			this->listBoxNumberData->Name = L"listBoxNumberData";
-			this->listBoxNumberData->Size = System::Drawing::Size(149, 100);
+			this->listBoxNumberData->Size = System::Drawing::Size(176, 100);
 			this->listBoxNumberData->TabIndex = 20;
 			// 
 			// listBoxSelectionSortTime
 			// 
 			this->listBoxSelectionSortTime->FormattingEnabled = true;
 			this->listBoxSelectionSortTime->ItemHeight = 16;
-			this->listBoxSelectionSortTime->Location = System::Drawing::Point(176, 121);
+			this->listBoxSelectionSortTime->Location = System::Drawing::Point(205, 157);
 			this->listBoxSelectionSortTime->Name = L"listBoxSelectionSortTime";
 			this->listBoxSelectionSortTime->Size = System::Drawing::Size(125, 100);
 			this->listBoxSelectionSortTime->TabIndex = 21;
@@ -324,7 +349,7 @@ namespace CppCLRWinFormsProject {
 			// buttonQuickSort
 			// 
 			this->buttonQuickSort->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->buttonQuickSort->Location = System::Drawing::Point(434, 57);
+			this->buttonQuickSort->Location = System::Drawing::Point(463, 93);
 			this->buttonQuickSort->Name = L"buttonQuickSort";
 			this->buttonQuickSort->Size = System::Drawing::Size(125, 30);
 			this->buttonQuickSort->TabIndex = 23;
@@ -336,7 +361,7 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->listBoxBubbleSortTime->FormattingEnabled = true;
 			this->listBoxBubbleSortTime->ItemHeight = 16;
-			this->listBoxBubbleSortTime->Location = System::Drawing::Point(305, 121);
+			this->listBoxBubbleSortTime->Location = System::Drawing::Point(334, 157);
 			this->listBoxBubbleSortTime->Name = L"listBoxBubbleSortTime";
 			this->listBoxBubbleSortTime->Size = System::Drawing::Size(125, 100);
 			this->listBoxBubbleSortTime->TabIndex = 22;
@@ -345,7 +370,7 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->listBoxQuickSortTime->FormattingEnabled = true;
 			this->listBoxQuickSortTime->ItemHeight = 16;
-			this->listBoxQuickSortTime->Location = System::Drawing::Point(434, 121);
+			this->listBoxQuickSortTime->Location = System::Drawing::Point(463, 157);
 			this->listBoxQuickSortTime->Name = L"listBoxQuickSortTime";
 			this->listBoxQuickSortTime->Size = System::Drawing::Size(125, 100);
 			this->listBoxQuickSortTime->TabIndex = 24;
@@ -354,17 +379,120 @@ namespace CppCLRWinFormsProject {
 			// 
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->label7->Location = System::Drawing::Point(430, 98);
+			this->label7->Location = System::Drawing::Point(459, 134);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(52, 20);
 			this->label7->TabIndex = 25;
 			this->label7->Text = L"(sec.)";
 			// 
+			// textBoxTarget
+			// 
+			this->textBoxTarget->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
+			this->textBoxTarget->Location = System::Drawing::Point(548, 48);
+			this->textBoxTarget->Name = L"textBoxTarget";
+			this->textBoxTarget->Size = System::Drawing::Size(100, 26);
+			this->textBoxTarget->TabIndex = 31;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
+			this->label8->Location = System::Drawing::Point(486, 51);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(52, 20);
+			this->label8->TabIndex = 30;
+			this->label8->Text = L"target";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
+			this->label9->Location = System::Drawing::Point(258, 51);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(83, 20);
+			this->label9->TabIndex = 29;
+			this->label9->Text = L"range end";
+			// 
+			// textBoxRangeEnd
+			// 
+			this->textBoxRangeEnd->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
+			this->textBoxRangeEnd->Location = System::Drawing::Point(372, 48);
+			this->textBoxRangeEnd->Name = L"textBoxRangeEnd";
+			this->textBoxRangeEnd->Size = System::Drawing::Size(100, 26);
+			this->textBoxRangeEnd->TabIndex = 28;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
+			this->label10->Location = System::Drawing::Point(20, 51);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(90, 20);
+			this->label10->TabIndex = 27;
+			this->label10->Text = L"range start";
+			// 
+			// textBoxRangeStart
+			// 
+			this->textBoxRangeStart->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
+			this->textBoxRangeStart->Location = System::Drawing::Point(123, 48);
+			this->textBoxRangeStart->Name = L"textBoxRangeStart";
+			this->textBoxRangeStart->Size = System::Drawing::Size(100, 26);
+			this->textBoxRangeStart->TabIndex = 26;
+			// 
+			// listBoxSearchResult
+			// 
+			this->listBoxSearchResult->FormattingEnabled = true;
+			this->listBoxSearchResult->ItemHeight = 16;
+			this->listBoxSearchResult->Location = System::Drawing::Point(594, 157);
+			this->listBoxSearchResult->Name = L"listBoxSearchResult";
+			this->listBoxSearchResult->Size = System::Drawing::Size(125, 100);
+			this->listBoxSearchResult->TabIndex = 32;
+			// 
+			// buttonBinarySearch
+			// 
+			this->buttonBinarySearch->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
+			this->buttonBinarySearch->Location = System::Drawing::Point(594, 93);
+			this->buttonBinarySearch->Name = L"buttonBinarySearch";
+			this->buttonBinarySearch->Size = System::Drawing::Size(125, 30);
+			this->buttonBinarySearch->TabIndex = 33;
+			this->buttonBinarySearch->Text = L"Binary Search";
+			this->buttonBinarySearch->UseVisualStyleBackColor = true;
+			this->buttonBinarySearch->Click += gcnew System::EventHandler(this, &Form1::buttonBinarySearch_Click);
+			// 
+			// checkBoxDisplayNumbers
+			// 
+			this->checkBoxDisplayNumbers->AutoSize = true;
+			this->checkBoxDisplayNumbers->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
+			this->checkBoxDisplayNumbers->Location = System::Drawing::Point(205, 278);
+			this->checkBoxDisplayNumbers->Name = L"checkBoxDisplayNumbers";
+			this->checkBoxDisplayNumbers->Size = System::Drawing::Size(160, 24);
+			this->checkBoxDisplayNumbers->TabIndex = 34;
+			this->checkBoxDisplayNumbers->Text = L"Display Numbers";
+			this->checkBoxDisplayNumbers->UseVisualStyleBackColor = true;
+			// 
+			// richTextBoxNumbers
+			// 
+			this->richTextBoxNumbers->Location = System::Drawing::Point(748, 19);
+			this->richTextBoxNumbers->Name = L"richTextBoxNumbers";
+			this->richTextBoxNumbers->Size = System::Drawing::Size(400, 600);
+			this->richTextBoxNumbers->TabIndex = 35;
+			this->richTextBoxNumbers->Text = L"Numbers";
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(582, 603);
+			this->ClientSize = System::Drawing::Size(1182, 653);
+			this->Controls->Add(this->richTextBoxNumbers);
+			this->Controls->Add(this->checkBoxDisplayNumbers);
+			this->Controls->Add(this->buttonBinarySearch);
+			this->Controls->Add(this->listBoxSearchResult);
+			this->Controls->Add(this->textBoxTarget);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->textBoxRangeEnd);
+			this->Controls->Add(this->label10);
+			this->Controls->Add(this->textBoxRangeStart);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->listBoxQuickSortTime);
 			this->Controls->Add(this->buttonQuickSort);
@@ -403,12 +531,12 @@ namespace CppCLRWinFormsProject {
 
 	private: bool dataGenerationSuccess = false;
 	
-	// Event handler for generating random numbers based on user inputs
 	private: System::Void buttonDataGeneration_Click(System::Object^ sender, System::EventArgs^ e) {
 		try {
 			// Clear existing data
 			numbers2D->Clear();
 			listBoxNumberData->Items->Clear();
+			richTextBoxNumbers->Clear(); // Clear the richTextBox content
 
 			// Validate inputs for numeric values and alert the user for invalid inputs
 			if (!IsInputValid(textBoxRepetition->Text) || !IsInputValid(textBoxStep->Text) || !IsInputValid(textBoxNumber->Text)) {
@@ -422,6 +550,15 @@ namespace CppCLRWinFormsProject {
 			int step = Int32::Parse(textBoxStep->Text);
 			int baseNumber = Int32::Parse(textBoxNumber->Text);
 
+			int rangeStart = 0;
+			int rangeEnd = baseNumber - 1;
+			if (IsInputValid(textBoxRangeStart->Text)) {
+				rangeStart = Int32::Parse(textBoxRangeStart->Text);
+			}
+			if (IsInputValid(textBoxRangeEnd->Text)) {
+				rangeEnd = Int32::Parse(textBoxRangeEnd->Text) - 1;
+			}
+
 			// Generate random data in repetitions
 			Random^ rnd = gcnew Random();
 			for (int i = 0; i < repetitions; i++) {
@@ -429,14 +566,24 @@ namespace CppCLRWinFormsProject {
 				System::Collections::Generic::List<int>^ numbers =
 					gcnew System::Collections::Generic::List<int>(); // Create a new list for this round
 
-				// Populate the list with random numbers
+				System::Text::StringBuilder^ numberString = gcnew System::Text::StringBuilder(); // Create a StringBuilder to compile numbers
+
+				// Populate the list with random numbers and build the string
 				for (int j = 0; j < n; j++) {
-					numbers->Add(rnd->Next(n)); // Numbers are from 0 to n - 1
+					int randomNumber = rnd->Next(rangeStart, rangeEnd + 1); // Ensure rangeEnd is inclusive
+					numbers->Add(randomNumber);
+					numberString->Append(randomNumber + " "); // Append number with a space
 				}
 
-				// Add the list to the 2D List and update the listBoxNumberData
+				// Add the list to the 2D List
 				numbers2D->Add(numbers);
 				listBoxNumberData->Items->Add(n);
+
+				// Check if checkBoxNumbers is checked before displaying numbers
+				if (checkBoxDisplayNumbers->Checked) {
+					// Append the generated numbers for this repetition to the richTextBox, with a newline for each repetition
+					richTextBoxNumbers->AppendText("Repetition " + (i + 1) + ": " + numberString->ToString() + "\r\n");
+				}
 			}
 			dataGenerationSuccess = true;
 		}
@@ -447,29 +594,45 @@ namespace CppCLRWinFormsProject {
 		}
 	}
 
-	   // Helper function to validate numeric input
+
+
+	 // Helper function to validate numeric input
 	private: bool IsInputValid(String^ input) {
 		int value;
 		return Int32::TryParse(input, value);
 	}
 
+	// Helper function to check if a list is correctly sorted
+	private: bool IsSortedCorrectly(System::Collections::Generic::List<int>^ list) {
+		for (int i = 0; i < list->Count - 1; i++) {
+			if (list[i] > list[i + 1]) return false;
+		}
+		return true;
+	}
+
 	public: System::Collections::Generic::List<double>^ selectionSortTimes =
 		gcnew System::Collections::Generic::List<double>();
 
-	public: System::Collections::Generic::List<System::Collections::Generic::List<int>^>^ selectionSortedNumbers2D =
+	public: System::Collections::Generic::List<System::Collections::Generic::List<int>^>^ sortedNumbers2D =
 		gcnew System::Collections::Generic::List<System::Collections::Generic::List<int>^>();
 
 	// Event handler for performing and timing Selection Sort, with separate sorted array
 	private: System::Void buttonSelectionSort_Click(System::Object^ sender, System::EventArgs^ e) {
 		// Prepare for new sorting operation
-		selectionSortedNumbers2D->Clear();
+		sortedNumbers2D->Clear();
 		selectionSortTimes->Clear();
 		listBoxSelectionSortTime->Items->Clear();
 
 		for (int i = 0; i < numbers2D->Count; i++) {
 			// Copy the current list to be sorted
 			auto listCopy = gcnew System::Collections::Generic::List<int>(numbers2D[i]);
-			selectionSortedNumbers2D->Add(listCopy); // Add the copy to the separate array
+			sortedNumbers2D->Add(listCopy); // Add the copy to the separate array
+
+			//skip if sorted
+			if (IsSortedCorrectly(listCopy)) {
+				listBoxSelectionSortTime->Items->Add("Sorted");
+				continue;
+			}
 
 			// Start timing the sort operation
 			auto startTime = System::Diagnostics::Stopwatch::StartNew();
@@ -505,20 +668,23 @@ namespace CppCLRWinFormsProject {
 	public: System::Collections::Generic::List<double>^ bubbleSortTimes =
 		gcnew System::Collections::Generic::List<double>();
 
-	public: System::Collections::Generic::List<System::Collections::Generic::List<int>^>^ bubbleSortedNumbers2D =
-		gcnew System::Collections::Generic::List<System::Collections::Generic::List<int>^>();
-
 	// Event handler for performing and timing Bubble Sort, with separate sorted array
 	private: System::Void buttonBubbleSort_Click(System::Object^ sender, System::EventArgs^ e) {
 		// Prepare for new sorting operation
-		bubbleSortedNumbers2D->Clear();
+		sortedNumbers2D->Clear();
 		bubbleSortTimes->Clear();
 		listBoxBubbleSortTime->Items->Clear();
 
 		for (int i = 0; i < numbers2D->Count; i++) {
 			// Copy the current list to be sorted
 			auto listCopy = gcnew System::Collections::Generic::List<int>(numbers2D[i]);
-			bubbleSortedNumbers2D->Add(listCopy); // Add the copy to the separate array
+			sortedNumbers2D->Add(listCopy); // Add the copy to the separate array
+
+			//skip if sorted
+			if (IsSortedCorrectly(listCopy)) {
+				listBoxBubbleSortTime->Items->Add("Sorted");
+				continue;
+			}
 
 			// Start timing the sort operation
 			auto startTime = System::Diagnostics::Stopwatch::StartNew();
@@ -552,18 +718,21 @@ namespace CppCLRWinFormsProject {
 	public: System::Collections::Generic::List<double>^ quickSortTimes =
 		gcnew System::Collections::Generic::List<double>();
 
-	public: System::Collections::Generic::List<System::Collections::Generic::List<int>^>^ quickSortedNumbers2D =
-		gcnew System::Collections::Generic::List<System::Collections::Generic::List<int>^>();
-
 	// Event handler for performing and timing QuickSort, with separate sorted array and time storage
 	private: System::Void buttonQuickSort_Click(System::Object^ sender, System::EventArgs^ e) {
-		quickSortedNumbers2D->Clear();
+		sortedNumbers2D->Clear();
 		quickSortTimes->Clear(); // Clear previous times
 		listBoxQuickSortTime->Items->Clear();
 
 		for (int i = 0; i < numbers2D->Count; i++) {
 			auto listCopy = gcnew System::Collections::Generic::List<int>(numbers2D[i]);
-			quickSortedNumbers2D->Add(listCopy); // Prepare for new sorting operation
+			sortedNumbers2D->Add(listCopy); // Prepare for new sorting operation
+
+			//skip if sorted
+			if (IsSortedCorrectly(listCopy)) {
+				listBoxQuickSortTime->Items->Add("Sorted");
+				continue;
+			}
 
 			auto startTime = System::Diagnostics::Stopwatch::StartNew();
 			QuickSort(listCopy, 0, listCopy->Count - 1); // Sort the copied list
@@ -672,14 +841,62 @@ namespace CppCLRWinFormsProject {
 		buttonLoadChart_Click(sender, e);
 	}
 
+	// BinarySearch Helper Function
+	private: int BinarySearch(System::Collections::Generic::List<int>^ list, int target) {
+		int left = 0;
+		int right = list->Count - 1;
+
+		while (left <= right) {
+			int mid = left + (right - left) / 2;
+
+			if (list[mid] == target) {
+				return mid; // Target found
+			}
+			else if (list[mid] < target) {
+				left = mid + 1; // Search in the right half
+			}
+			else {
+				right = mid - 1; // Search in the left half
+			}
+		}
+
+		return -1; // Target not found
+	}
+
 	private: System::Void buttonClear_Click(System::Object^ sender, System::EventArgs^ e) {
 		listBoxNumberData->Items->Clear();
 		listBoxSelectionSortTime->Items->Clear();
 		listBoxBubbleSortTime->Items->Clear();
 		listBoxQuickSortTime->Items->Clear();
+		listBoxSearchResult->Items->Clear();
 		chartResult->Series["SelectionSort"]->Points->Clear();
 		chartResult->Series["BubbleSort"]->Points->Clear();
 		chartResult->Series["QuickSort"]->Points->Clear();
 	}
+	private: System::Void buttonBinarySearch_Click(System::Object^ sender, System::EventArgs^ e) {
+		listBoxSearchResult->Items->Clear(); // Clear previous search results
+
+		// Parse the target value from textBoxTarget
+		int target;
+		if (!Int32::TryParse(textBoxTarget->Text, target)) {
+			MessageBox::Show("Please enter a valid numeric value for the target.", "Input Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			return;
+		}
+
+		// Iterate through each sorted list and perform binary search
+		for (int i = 0; i < sortedNumbers2D->Count; i++) {
+			int index = BinarySearch(sortedNumbers2D[i], target);
+
+			if (index != -1) {
+				// If target is found, display the occurrence
+				listBoxSearchResult->Items->Add("Found at index " + index);
+			}
+			else {
+				// If target is not found, indicate it
+				listBoxSearchResult->Items->Add("Not found");
+			}
+		}
+	}
+
 };
 }
